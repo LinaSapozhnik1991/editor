@@ -2,12 +2,14 @@
   "name": "code-editor",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://linasapozhnik1991.github.io/editor",
   "dependencies": {
     "@monaco-editor/react": "^4.6.0",
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^13.0.0",
     "@testing-library/user-event": "^13.2.1",
     "cors": "^2.8.5",
+    "gh-pages": "^6.2.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-scripts": "5.0.1",
@@ -19,7 +21,9 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "server": "json-server --watch db.json --port 5000"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+
   },
   "eslintConfig": {
     "extends": [
